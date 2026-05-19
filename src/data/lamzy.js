@@ -33,31 +33,30 @@ export const BRAND = "LAMZYEXPRESS";
 // ─────────────────────────────────────────────────────────────────────────────
 
 // ── Step 3: Uncomment once your images are in src/assets/cars/ ───────────────
- import economyImg  from "../assets/cars/sedan.png";
-import suvImg      from "../assets/cars/pradosuv.png";
- import luxuryImg   from "../assets/cars/luxury.png";
-import vanImg      from "../assets/cars/van.png";
-import compactImg  from "../assets/cars/hatch.png";
-import execImg     from "../assets/cars/salon.png";
- 
+import economyImg from "../assets/cars/sedan.png";
+import suvImg from "../assets/cars/pradosuv.png";
+import luxuryImg from "../assets/cars/luxury.png";
+import vanImg from "../assets/cars/van.png";
+import compactImg from "../assets/cars/hatch.png";
+import execImg from "../assets/cars/salon.png";
 
 export const CARS = [
   {
     id: "economy",
     // ▼ EDIT THIS — set to your imported var or a URL string
-    image: [economyImg],               // e.g. image: economyImg  OR  image: "https://..."
-    emoji: "🚗",               // shown when image is null
-    name: "Economy Sedan",     // ← car display name
-    type: "Sedan",             // ← shown under name
-    price: 25000,              // ← price per day in NGN
+    image: [economyImg], // e.g. image: economyImg  OR  image: "https://..."
+    emoji: "🚗", // shown when image is null
+    name: "Economy Sedan", // ← car display name
+    type: "Sedan", // ← shown under name
+    price: 25000, // ← price per day in NGN
     seats: 4,
     features: ["AC", "Fuel", "Driver"],
-    badge: "Budget",           // ← badge text (leave "" for no badge)
-    badgeColor: "#25D366",     // ← badge colour (hex)
+    badge: "Budget", // ← badge text (leave "" for no badge)
+    badgeColor: "#25D366", // ← badge colour (hex)
   },
   {
     id: "suv",
-    image: [suvImg],               // e.g. image: suvImg
+    image: [suvImg], // e.g. image: suvImg
     emoji: "🚙",
     name: "Premium SUV",
     type: "SUV",
@@ -69,7 +68,7 @@ export const CARS = [
   },
   {
     id: "luxury",
-    image: [luxuryImg],               // e.g. image: luxuryImg
+    image: [luxuryImg], // e.g. image: luxuryImg
     emoji: "🏎️",
     name: "Luxury Class",
     type: "Luxury",
@@ -81,7 +80,7 @@ export const CARS = [
   },
   {
     id: "van",
-    image: [vanImg],               // e.g. image: vanImg
+    image: [vanImg], // e.g. image: vanImg
     emoji: "🚐",
     name: "Minivan",
     type: "Van",
@@ -93,7 +92,7 @@ export const CARS = [
   },
   {
     id: "compact",
-    image: [compactImg],               // e.g. image: compactImg
+    image: [compactImg], // e.g. image: compactImg
     emoji: "🚕",
     name: "Compact Hatch",
     type: "Hatchback",
@@ -105,7 +104,7 @@ export const CARS = [
   },
   {
     id: "executive",
-    image: [execImg],               // e.g. image: execImg
+    image: [execImg], // e.g. image: execImg
     emoji: "🚘",
     name: "Executive Saloon",
     type: "Executive",
@@ -121,23 +120,55 @@ export const CARS = [
 // LOCATIONS
 // ─────────────────────────────────────────────────────────────────────────────
 export const LOCATIONS = [
-  { id: "lagos-island", name: "Lagos Island",    emoji: "🏙️", region: "Lagos",  cars: 24 },
-  { id: "victoria",     name: "Victoria Island", emoji: "🌊", region: "Lagos",  cars: 18 },
-  { id: "ikeja",        name: "Ikeja",           emoji: "✈️", region: "Lagos",  cars: 31 },
-  { id: "lekki",        name: "Lekki",           emoji: "🏡", region: "Lagos",  cars: 22 },
-  { id: "ajah",         name: "Ajah",            emoji: "🌅", region: "Lagos",  cars: 15 },
-  { id: "surulere",     name: "Surulere",        emoji: "🏘️", region: "Lagos",  cars: 12 },
-  { id: "maryland",     name: "Maryland",        emoji: "🏢", region: "Lagos",  cars: 9  },
-  { id: "abuja-cbd",    name: "Abuja CBD",       emoji: "🏛️", region: "Abuja", cars: 20 },
+  {
+    id: "lagos-island",
+    name: "Lagos Island",
+    emoji: "🏙️",
+    region: "Lagos",
+    cars: 24,
+  },
+  {
+    id: "victoria",
+    name: "Victoria Island",
+    emoji: "🌊",
+    region: "Lagos",
+    cars: 18,
+  },
+  { id: "ikeja", name: "Ikeja", emoji: "✈️", region: "Lagos", cars: 31 },
+  { id: "lekki", name: "Lekki", emoji: "🏡", region: "Lagos", cars: 22 },
+  { id: "ajah", name: "Ajah", emoji: "🌅", region: "Lagos", cars: 15 },
+  { id: "yaba", name: "Yaba", emoji: "🎓", region: "Lagos", cars: 10 }, 
+  {id:"Banabana", name:"Banana Island", emoji:"🍌", region:"Lagos", cars: 8},
+  { id: 'ikate', name: 'Ikate', emoji: '🏖️', region: 'Lagos', cars: 11 },
+  { id: "surulere", name: "Surulere", emoji: "🏘️", region: "Lagos", cars: 12 },
+  { id: "maryland", name: "Maryland", emoji: "🏢", region: "Lagos", cars: 9 },
+  {
+    id: "abuja-cbd",
+    name: "Abuja CBD",
+    emoji: "🏛️",
+    region: "Abuja",
+    cars: 20,
+  },
+  { id: "wuse", name: "Wuse", emoji: "🛍️", region: "Abuja", cars: 14 },
+  { id: "garki", name: "Garki", emoji: "🏬", region: "Abuja", cars: 17 },
+  { id: "asokoro", name: "Asokoro", emoji: "🏰", region: "Abuja", cars: 13 },
+  { id: "mabushi", name: "Mabushi", emoji: "🌳", region: "Abuja", cars: 8 },
+  { id: "jabi", name: "Jabi", emoji: "🏞️", region: "Abuja", cars: 11 },
+  { id: "gwarinpa", name: "Gwarinpa", emoji: "🏘️", region: "Abuja", cars: 10 },
+  { id: "kubwa", name: "Kubwa", emoji: "🏭", region: "Abuja", cars: 7 },
+  { id: "lokogoma", name: "Lokogoma", emoji: "🏗️", region: "Abuja", cars: 9 },
+  { id: "lugbe", name: "Lugbe", emoji: "🌾", region: "Abuja", cars: 6 },
+  {id: "Airport", name: "Nnamdi Azikiwe Intl Airport", emoji: "✈️", region: "Abuja", cars: 12},
+  { id: "Maitama", name: "Maitama", emoji: "🏛️", region: "Abuja", cars: 14 },
 ];
 
 // ─────────────────────────────────────────────────────────────────────────────
 // STATS — shown in hero section
 // ─────────────────────────────────────────────────────────────────────────────
 export const STATS = [
-  { value: "500+", label: "Vehicles"   },
-  { value: "8",    label: "Locations"  },
-  { value: "4.9★", label: "Rating"    },
+  { value: "500+", label: "Vehicles" },
+  { value: "8", label: "Locations" },
+  { value: "4.9★", label: "Rating" },
   { value: "3min", label: "Avg. Reply" },
 ];
 
@@ -153,21 +184,23 @@ export function diffDays(a, b) {
 }
 
 export function buildWhatsAppMessage(form, car, days, total) {
-  const pickup  = LOCATIONS.find((l) => l.id === form.pickupLoc);
+  const pickup = LOCATIONS.find((l) => l.id === form.pickupLoc);
   const dropoff = LOCATIONS.find((l) => l.id === form.dropoffLoc);
   const lines = [
-    `🚗 *${BRAND} Car Rental — Booking Request*`, ``,
-    `👤 Name: ${form.name   || "N/A"}`,
+    `🚗 *${BRAND} Car Rental — Booking Request*`,
+    ``,
+    `👤 Name: ${form.name || "N/A"}`,
     `📞 Phone: ${form.phone || "N/A"}`,
     `🚙 Vehicle: ${car.name} (${car.type})`,
-    `📍 Pickup: ${pickup  ? pickup.name  : "N/A"}`,
+    `📍 Pickup: ${pickup ? pickup.name : "N/A"}`,
     `📍 Drop-off: ${dropoff ? dropoff.name : "Same as pickup"}`,
     `📅 Pickup Date: ${form.pickupDate || "N/A"}`,
     `📅 Return Date: ${form.returnDate || "N/A"}`,
     `📆 Duration: ${days} day${days > 1 ? "s" : ""}`,
     `💰 Rate: ${fmt(car.price)}/day`,
     `💳 Estimated Total: ${fmt(total)}`,
-    form.notes ? `📝 Notes: ${form.notes}` : null, ``,
+    form.notes ? `📝 Notes: ${form.notes}` : null,
+    ``,
     `_Sent from ${BRAND} Website_`,
   ];
   return encodeURIComponent(lines.filter(Boolean).join("\n"));

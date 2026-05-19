@@ -50,7 +50,7 @@ function CarCard({ car, onQuickBook }) {
   return (
     <div
       style={{
-        background: "#f5f5f5",
+        background: "#926767",
         border: "1px solid rgba(214,171,88,0.1)",
         borderRadius: 16,
         padding: "1.4rem",
