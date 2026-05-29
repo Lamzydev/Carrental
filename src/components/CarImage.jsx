@@ -1,13 +1,4 @@
-/**
- * CarImage
- * ─────────────────────────────────────────────────────────
- * Renders a car image (local asset or URL) when available.
- * Falls back to the emoji if image is null/undefined.
- *
- * Props:
- *   car  — car object from lamzy.js
- *   size — "lg" (fleet card)  |  "sm" (booking selector)
- */
+
 export default function CarImage({ car, size = "lg" }) {
   const isLg = size === "lg";
 
@@ -15,7 +6,7 @@ export default function CarImage({ car, size = "lg" }) {
     return (
       <div style={{
         width: "100%",
-        height: isLg ? 130 : 52,
+        height: "100%",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -42,7 +33,7 @@ export default function CarImage({ car, size = "lg" }) {
     );
   }
 
-  // ── Emoji fallback ──
+
   return (
     <span style={{
       display: "block",

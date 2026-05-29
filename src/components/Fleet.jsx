@@ -1,8 +1,7 @@
 import { CARS, fmt } from "../data/lamzy";
 import CarImage from "./CarImage";
 
-// ─── SectionHeader ─────────────────────────────────────────────────────────
-// Exported so other sections (Locations, BookingForm) can reuse it.
+
 export function SectionHeader({ label, title, dim }) {
   return (
     <div style={{ textAlign: "center", marginBottom: 4 }}>
@@ -45,7 +44,6 @@ export default function Fleet({ onQuickBook }) {
   );
 }
 
-// ─── CarCard ───────────────────────────────────────────────────────────────
 function CarCard({ car, onQuickBook }) {
   return (
     <div
@@ -87,10 +85,9 @@ function CarCard({ car, onQuickBook }) {
         )}
       </div>
 
-      {/* ── Car image or emoji ── */}
       <CarImage car={car} size="lg" />
 
-      {/* ── Name & type ── */}
+      
       <h3 style={{
         fontFamily: "'Bebas Neue',cursive",
         fontSize: "1.2rem", color: "#F0EBDC",

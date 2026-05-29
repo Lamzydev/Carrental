@@ -1,6 +1,6 @@
 import { STATS } from "../data/lamzy";
 import WhatsAppIcon from "./WhatsAppIcon";
-
+import bgpic from "../assets/cars/background.png"
 
 
 export default function Hero({ onBookNow }) {
@@ -10,22 +10,29 @@ export default function Hero({ onBookNow }) {
       display: "flex", alignItems: "center",
       padding: "5rem 1.5rem 3rem",
       
-    background: `linear-gradient(135deg, rgba(160, 37, 37, 0.8) 0%, rgba(197, 192, 184, 0.8) 100%)` ,
+    background: `url(${bgpic})`, 
+    backgroundSize: "cover", 
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+   
       position: "relative", overflow: "hidden",
     }}>
       {/* Grid texture */}
       <div style={{
-        position: "absolute", inset: 0, pointerEvents: "none", opacity: 0.025,
-        backgroundImage: "linear-gradient(rgba(214,171,88,0.6) 1px,transparent 1px),linear-gradient(90deg,rgba(214,171,88,0.6) 1px,transparent 1px)" ,
-        backgroundSize: "60px 60px",
+        // position: "absolute", inset: 0, pointerEvents: "none", opacity: 0.025,
+        // backgroundImage: `url(${bgpic})`,
+        // backgroundSize: "cover",
+        // backgroundPosition: "center",
+        // height: "100vh",
+        // backgroundRepeat: "repeat",
       }} />
 
       <div style={{ maxWidth: 1200, margin: "0 auto", width: "100%", position: "relative", zIndex: 1 }}>
 
-        {/* Responsive grid: 1 col mobile, 2 col desktop */}
+
         <div className="hero-grid">
 
-          {/* ── Left ── */}
+        
           <div>
             {/* Badge */}
             <div style={{
@@ -39,7 +46,7 @@ export default function Hero({ onBookNow }) {
               </span>
             </div>
 
-            {/* Headline */}
+         
             <h1 style={{
               fontFamily: "'Bebas Neue',cursive",
               fontSize: "clamp(3rem,10vw,6.5rem)",
@@ -53,14 +60,15 @@ export default function Hero({ onBookNow }) {
             {/* Subtitle */}
             <p style={{
               fontFamily: "'DM Sans',sans-serif",
-              fontSize: "clamp(0.9rem,3vw,1.05rem)", lineHeight: 1.75,
-              color: "rgba(240,235,220,0.5)", maxWidth: 440, marginBottom: 28,
+              fontSize: "clamp(0.9rem,3vw,1.55rem)", lineHeight: 1.75,
+              color: "rgba(228, 45, 45, 0.95)", maxWidth: 440, marginBottom: 28,
+              
             }}>
               Premium and economy cars available across Lagos and Abuja.
               Instant WhatsApp booking, professional drivers, fully insured.
             </p>
 
-            {/* CTAs */}
+        
             <div className="hero-ctas">
               <button onClick={onBookNow} style={{
                 display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
@@ -96,12 +104,8 @@ export default function Hero({ onBookNow }) {
             </div>
           </div>
 
-          {/* ── Right: Car card — hidden on small screens ── */}
-          <div className="hero-card-wrap">
-            
+          
       
-            
-          </div>
         </div>
       </div>
 

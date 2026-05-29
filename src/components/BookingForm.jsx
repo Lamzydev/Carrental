@@ -54,7 +54,7 @@ const BookingForm = forwardRef(function BookingForm(
     setSent(true);
   }
 
-  // ── Shared style helpers ─────────────────────────────────────────────────
+ 
   const inp = (name) => ({
     width: "100%", background: "#0d0d0d",
     border: `1px solid ${errors[name] ? "#e05252" : "rgba(214,171,88,0.2)"}`,
@@ -79,7 +79,7 @@ const BookingForm = forwardRef(function BookingForm(
 
   const divider = <div style={{ height: 1, background: "rgba(214,171,88,0.08)", margin: "1.5rem 0" }} />;
 
-  // ── Location optgroups ───────────────────────────────────────────────────
+ 
   const LocationOptions = () => regions.map(r => (
     <optgroup key={r} label={`── ${r} ──`}>
       {LOCATIONS.filter(l => l.region === r).map(l => (
@@ -101,7 +101,7 @@ const BookingForm = forwardRef(function BookingForm(
           padding: "clamp(1.25rem, 4vw, 2.5rem)",
         }}>
 
-          {/* ── Personal Info ── */}
+          /* ── Personal Info ── */
           <span style={leg}>Your Details</span>
           <div className="form-grid">
             <Field label="Full Name *" error={errors.name} lbl={lbl}>
@@ -122,7 +122,7 @@ const BookingForm = forwardRef(function BookingForm(
 
           {divider}
 
-          {/* ── Locations ── */}
+        
           <span style={leg}>Pickup & Drop-off</span>
           <div className="form-grid">
             <Field label="Pickup Location *" error={errors.pickupLoc} lbl={lbl}>
@@ -149,7 +149,7 @@ const BookingForm = forwardRef(function BookingForm(
 
           {divider}
 
-          {/* ── Dates ── */}
+          /* ── Dates ── */
           <span style={leg}>Trip Dates</span>
           <div className="form-grid">
             <Field label="Pickup Date *" error={errors.pickupDate} lbl={lbl}>
@@ -172,7 +172,7 @@ const BookingForm = forwardRef(function BookingForm(
 
           {divider}
 
-          {/* ── Car Selector ── */}
+          
           <span style={leg}>Choose Vehicle</span>
           <div className="car-grid">
             {CARS.map(c => {
@@ -193,7 +193,7 @@ const BookingForm = forwardRef(function BookingForm(
                     overflow: "hidden",
                   }}
                 >
-                  {/* Image or emoji */}
+                 
                   <CarImage car={c} size="sm" />
 
                   <span style={{
@@ -216,7 +216,7 @@ const BookingForm = forwardRef(function BookingForm(
 
           {divider}
 
-          {/* ── Notes ── */}
+         
           <span style={leg}>
             Special Requests{" "}
             <span style={{ color: "rgba(240,235,220,0.25)", textTransform: "none", letterSpacing: 0 }}>(optional)</span>
@@ -232,7 +232,7 @@ const BookingForm = forwardRef(function BookingForm(
 
           {divider}
 
-          {/* ── Price Summary ── */}
+
           <div style={{
             background: "#0d0d0d",
             border: "1px solid rgba(214,171,88,0.1)",
@@ -261,7 +261,7 @@ const BookingForm = forwardRef(function BookingForm(
             </div>
           </div>
 
-          {/* ── WhatsApp CTA ── */}
+      
           <button
             type="button"
             onClick={handleBook}
@@ -281,7 +281,7 @@ const BookingForm = forwardRef(function BookingForm(
             <WhatsAppIcon size={21} /> SEND BOOKING ON WHATSAPP
           </button>
 
-          {/* ── Success Banner ── */}
+        
           {sent && (
             <div style={{
               marginTop: 12,
@@ -322,7 +322,6 @@ const BookingForm = forwardRef(function BookingForm(
 
 export default BookingForm;
 
-// ─── Field wrapper ────────────────────────────────────────────────────────────
 function Field({ label, error, lbl, children }) {
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>

@@ -55,7 +55,7 @@ export default function Navbar({ onBookNow }) {
           ))}
         </ul>
 
-        {/* Desktop CTA */}
+   
         <div style={{ display: "flex", alignItems: "center", gap: 12 }} className="desktop-nav">
           <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noopener noreferrer"
             style={{ display: "flex", alignItems: "center", gap: 6, color: "#e5f3eb", fontFamily: "'DM Sans',sans-serif", fontWeight: 500, fontSize: "0.83rem", textDecoration: "none" }}>
@@ -79,7 +79,7 @@ export default function Navbar({ onBookNow }) {
         </button>
       </nav>
 
-      {/* Mobile dropdown */}
+   
       <div style={{
         position: "fixed", top: 60, left: 0, right: 0, zIndex: 99,
         background: "rgba(8,8,8,0.97)", backdropFilter: "blur(16px)",
